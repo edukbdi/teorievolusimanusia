@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teori Evolusi Manusia yang Sering Disalahpahami | KBDI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── CSS Variables ── */
+    :root {
+      --bg:          #0f0f0f;
+      --bg2:         #161616;
+      --bg3:         #1e1e1e;
+      --border:      #2a2a2a;
+      --text:        #e8e4dc;
+      --text-muted:  #8a8580;
+      --accent:      #c8a96e;
+      --accent2:     #7eb8a0;
+      --accent3:     #e07b54;
+      --card-bg:     #181818;
+      --tag-bg:      #242424;
+      --shadow:      rgba(0,0,0,0.6);
+      --myth-bg:     #1a1010;
+      --myth-border: #7a2a2a;
+      --fact-bg:     #0e1a14;
+      --fact-border: #2a6a4a;
+    }
+    html.light {
+      --bg:          #f7f4ef;
+      --bg2:         #f0ece4;
+      --bg3:         #e8e2d8;
+      --border:      #d8d0c4;
+      --text:        #1a1814;
+      --text-muted:  #7a7268;
+      --accent:      #8b5e1a;
+      --accent2:     #2a6a50;
+      --accent3:     #b04a28;
+      --card-bg:     #faf8f4;
+      --tag-bg:      #ede8e0;
+      --shadow:      rgba(0,0,0,0.12);
+      --myth-bg:     #fdf0f0;
+      --myth-border: #c04040;
+      --fact-bg:     #f0faf4;
+      --fact-border: #30885a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ── Layout ── */
+    .article-hero {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(200,169,110,0.08), transparent);
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--text);
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .hero-title em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ── Typography ── */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      color: var(--text);
+      margin: 56px 0 20px;
+      line-height: 1.25;
+    }
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 40px 0 12px;
+    }
+    p { margin-bottom: 20px; }
+    strong { color: var(--text); font-weight: 600; }
+
+    a { color: var(--accent2); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+
+    .lead {
+      font-size: 1.15em;
+      color: var(--text);
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    /* ── Misconception Cards ── */
+    .misc-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #0f0f0f;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    .misc-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .misc-header h2 { margin: 0; }
+
+    .myth-box, .fact-box {
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin-bottom: 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .myth-box {
+      background: var(--myth-bg);
+      border-left: 4px solid var(--myth-border);
+    }
+    .fact-box {
+      background: var(--fact-bg);
+      border-left: 4px solid var(--fact-border);
+    }
+    .myth-box strong, .fact-box strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .myth-box strong { color: #e05555; }
+    .fact-box strong { color: var(--accent2); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 56px 0;
+    }
+
+    /* ── SVG Illustrations ── */
+    .illustration-wrap {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px 20px 20px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .illustration-wrap figcaption {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      font-style: italic;
+    }
+    .illustration-wrap svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ── Table ── */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      margin: 24px 0;
+    }
+    .styled-table th {
+      background: var(--bg3);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 2px solid var(--accent);
+    }
+    .styled-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+    .styled-table tr:hover td { background: var(--bg3); }
+    .table-wrap { overflow-x: auto; }
+
+    /* ── Pull Quote ── */
+    .pull-quote {
+      border-top: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding: 28px 0;
+      margin: 48px 0;
+      text-align: center;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .pull-quote cite {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ── Source list ── */
+    .sources {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 24px 28px;
+      margin-top: 56px;
+    }
+    .sources h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+    }
+    .sources ol {
+      padding-left: 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .sources ol li { margin-bottom: 8px; }
+
+    /* ── Closing box ── */
+    .closing-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: 0 0 6px 6px;
+      padding: 32px;
+      margin-top: 56px;
+    }
+    .closing-box p { font-size: 0.95em; margin-bottom: 0; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .article-hero { padding: 72px 16px 48px; }
+      .article-body { padding: 40px 16px 60px; }
+      .myth-box, .fact-box { padding: 14px 16px; }
+      .illustration-wrap { padding: 20px 12px 16px; }
+      .sources { padding: 18px 18px; }
+      .styled-table th, .styled-table td { padding: 9px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="article-hero">
+    <div class="hero-tag">Sains &amp; Literasi</div>
+    <h1 class="hero-title">Teori Evolusi Manusia yang Sering <em>Disalahpahami</em></h1>
+    <p class="hero-sub">Dari karikatur monyet hingga tuduhan rasisme — meluruskan tujuh miskonsepsi paling umum tentang evolusi.</p>
+    <div class="hero-meta">
+      <span>📅 2025</span>
+      <span>⏱ ~10 menit baca</span>
+      <span>🔬 Sains Populer</span>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <article class="article-body">
+
+    <p class="lead">Teori evolusi adalah salah satu teori ilmiah paling teruji dalam sejarah sains — dan sekaligus salah satu yang paling banyak disalahpahami. Kesalahpahaman ini bukan karena buktinya lemah, justru sebaliknya: distorsi populer, narasi ideologis, dan kurikulum sains yang tidak memadai telah menciptakan versi "evolusi" yang tidak dikenali oleh ilmuwan mana pun.</p>
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 1 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">1</span>
+      <h2>Manusia Berevolusi dari Kera atau Monyet</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Kalau manusia berevolusi dari monyet, kenapa masih ada monyet?"
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Manusia dan kera besar (<em>great apes</em>) berbagi <strong>nenek moyang bersama yang sudah punah</strong>, bukan satu menurunkan yang lain. Garis keturunan manusia dan simpanse diperkirakan berpisah sekitar <strong>6–7 juta tahun yang lalu</strong>.
+    </div>
+
+    <!-- Gambar miskonsepsi: ilustrasi AI (Copilot) -->
+    <figure class="illustration-wrap" style="padding:16px;">
+      <img
+        src="https://edukbdi.github.io/teorievolusimanusia/gambar1.png"
+        alt="Ilustrasi miskonsepsi: manusia berevolusi langsung dari monyet dalam garis lurus"
+        style="width:100%; border-radius:6px; display:block;"
+        loading="lazy"
+      />
+      <figcaption>Gambaran populer yang menyesatkan: evolusi manusia digambarkan sebagai garis lurus dari kera ke manusia modern. Inilah miskonsepsi yang akan kita luruskan. <em>Ilustrasi: dibuat dengan Microsoft Copilot.</em></figcaption>
+    </figure>
+
+    <!-- DIAGRAM POHON EVOLUSI MANUSIA -->
+    <figure class="illustration-wrap">
+      <svg width="100%" viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans', sans-serif">
+        <defs>
+          <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <line x1="60" y1="80" x2="60" y2="570" stroke="#8a8580" stroke-width="1" opacity="0.4"/>
+        <text x="52" y="84"  text-anchor="end" fill="#8a8580" font-size="11">7 jt thn</text>
+        <text x="52" y="154" text-anchor="end" fill="#8a8580" font-size="11">4 jt thn</text>
+        <text x="52" y="234" text-anchor="end" fill="#8a8580" font-size="11">2,4 jt thn</text>
+        <text x="52" y="314" text-anchor="end" fill="#8a8580" font-size="11">1,9 jt thn</text>
+        <text x="52" y="394" text-anchor="end" fill="#8a8580" font-size="11">700 rb thn</text>
+        <text x="52" y="474" text-anchor="end" fill="#8a8580" font-size="11">300 rb thn</text>
+        <text x="52" y="554" text-anchor="end" fill="#8a8580" font-size="11">Kini</text>
+        <line x1="56" y1="80"  x2="64" y2="80"  stroke="#8a8580" stroke-width="1"/>
+        <line x1="56" y1="154" x2="64" y2="154" stroke="#8a8580" stroke-width="1"/>
+        <line x1="56" y1="234" x2="64" y2="234" stroke="#8a8580" stroke-width="1"/>
+        <line x1="56" y1="314" x2="64" y2="314" stroke="#8a8580" stroke-width="1"/>
+        <line x1="56" y1="394" x2="64" y2="394" stroke="#8a8580" stroke-width="1"/>
+        <line x1="56" y1="474" x2="64" y2="474" stroke="#8a8580" stroke-width="1"/>
+        <line x1="56" y1="554" x2="64" y2="554" stroke="#8a8580" stroke-width="1"/>
+        <rect x="80" y="62" width="220" height="38" rx="6" fill="#2a2a2a" stroke="#5a5a5a" stroke-width="0.5"/>
+        <text x="190" y="77" text-anchor="middle" fill="#e8e4dc" font-size="13" font-weight="600">Nenek moyang bersama</text>
+        <text x="190" y="92" text-anchor="middle" fill="#8a8580" font-size="11">Manusia + simpanse, ~7 juta tahun lalu</text>
+        <line x1="190" y1="100" x2="190" y2="122" stroke="#8a8580" stroke-width="1.5" opacity="0.5"/>
+        <path d="M190 122 L110 154" stroke="#378add" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <path d="M190 122 L320 154" stroke="#c8a96e" stroke-width="2" fill="none"/>
+        <rect x="66" y="136" width="90" height="36" rx="6" fill="#0e1a2a" stroke="#378add" stroke-width="0.5"/>
+        <text x="111" y="151" text-anchor="middle" fill="#85b7eb" font-size="12" font-weight="600">Simpanse</text>
+        <text x="111" y="164" text-anchor="middle" fill="#5a7a9a" font-size="10">Masih ada</text>
+        <line x1="111" y1="172" x2="111" y2="554" stroke="#378add" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.35" marker-end="url(#arr2)"/>
+        <rect x="240" y="136" width="164" height="36" rx="6" fill="#1e1800" stroke="#c8a96e" stroke-width="0.5"/>
+        <text x="322" y="151" text-anchor="middle" fill="#c8a96e" font-size="12" font-weight="600">Ardipithecus ramidus</text>
+        <text x="322" y="164" text-anchor="middle" fill="#8a7040" font-size="10">"Ardi" - bipedal parsial</text>
+        <line x1="322" y1="172" x2="322" y2="216" stroke="#c8a96e" stroke-width="2"/>
+        <rect x="240" y="216" width="164" height="36" rx="6" fill="#1e1800" stroke="#c8a96e" stroke-width="0.5"/>
+        <text x="322" y="231" text-anchor="middle" fill="#c8a96e" font-size="12" font-weight="600">Australopithecus</text>
+        <text x="322" y="244" text-anchor="middle" fill="#8a7040" font-size="10">"Lucy" - bipedal penuh</text>
+        <line x1="322" y1="252" x2="322" y2="274" stroke="#c8a96e" stroke-width="2"/>
+        <path d="M322 274 L230 314" stroke="#c8a96e" stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="5 3"/>
+        <path d="M322 274 L400 314" stroke="#c8a96e" stroke-width="2" fill="none"/>
+        <rect x="158" y="296" width="145" height="36" rx="6" fill="#1a1010" stroke="#e07b54" stroke-width="0.5"/>
+        <text x="230" y="311" text-anchor="middle" fill="#e07b54" font-size="12" font-weight="600">Homo habilis</text>
+        <text x="230" y="324" text-anchor="middle" fill="#8a5040" font-size="10">Pengguna alat batu pertama</text>
+        <text x="230" y="348" text-anchor="middle" fill="#5a4030" font-size="10">punah</text>
+        <rect x="326" y="296" width="150" height="36" rx="6" fill="#1e1800" stroke="#c8a96e" stroke-width="0.5"/>
+        <text x="401" y="311" text-anchor="middle" fill="#c8a96e" font-size="12" font-weight="600">Homo erectus</text>
+        <text x="401" y="324" text-anchor="middle" fill="#8a7040" font-size="10">Pertama keluar Afrika</text>
+        <line x1="401" y1="332" x2="401" y2="376" stroke="#c8a96e" stroke-width="2"/>
+        <rect x="307" y="376" width="188" height="36" rx="6" fill="#1e1800" stroke="#c8a96e" stroke-width="0.5"/>
+        <text x="401" y="391" text-anchor="middle" fill="#c8a96e" font-size="12" font-weight="600">Homo heidelbergensis</text>
+        <text x="401" y="404" text-anchor="middle" fill="#8a7040" font-size="10">Nenek moyang bersama</text>
+        <line x1="401" y1="412" x2="401" y2="434" stroke="#c8a96e" stroke-width="2"/>
+        <path d="M401 434 L300 474" stroke="#7f77dd" stroke-width="1.5" fill="none"/>
+        <path d="M401 434 L500 474" stroke="#1d9e75" stroke-width="2.5" fill="none"/>
+        <rect x="220" y="456" width="165" height="36" rx="6" fill="#16142a" stroke="#7f77dd" stroke-width="0.5"/>
+        <text x="302" y="471" text-anchor="middle" fill="#afa9ec" font-size="12" font-weight="600">H. neanderthalensis</text>
+        <text x="302" y="484" text-anchor="middle" fill="#6a6490" font-size="10">Spesies saudara</text>
+        <text x="302" y="510" text-anchor="middle" fill="#6a6490" font-size="10">punah ~40.000 thn lalu</text>
+        <path d="M385 480 Q432 512 488 476" stroke="#7f77dd" stroke-width="1" stroke-dasharray="4 3" fill="none" opacity="0.6" marker-end="url(#arr2)"/>
+        <text x="432" y="522" text-anchor="middle" fill="#7f77dd" font-size="10" opacity="0.8">1-4% DNA</text>
+        <rect x="418" y="456" width="148" height="36" rx="6" fill="#0a1e14" stroke="#1d9e75" stroke-width="1"/>
+        <text x="492" y="471" text-anchor="middle" fill="#5dcaa5" font-size="13" font-weight="600">Homo sapiens</text>
+        <text x="492" y="484" text-anchor="middle" fill="#3a7a60" font-size="10">Kita - asal Afrika</text>
+        <line x1="492" y1="492" x2="492" y2="544" stroke="#1d9e75" stroke-width="2.5" marker-end="url(#arr2)"/>
+        <rect x="432" y="544" width="120" height="28" rx="6" fill="#0a1e14" stroke="#1d9e75" stroke-width="1"/>
+        <text x="492" y="562" text-anchor="middle" fill="#5dcaa5" font-size="12" font-weight="600">Masih ada hingga kini</text>
+        <rect x="80"  y="590" width="10" height="10" rx="2" fill="#c8a96e" opacity="0.7"/>
+        <text x="96"  y="599" fill="#8a8580" font-size="11">Jalur hominin</text>
+        <rect x="190" y="590" width="10" height="10" rx="2" fill="#378add" opacity="0.7"/>
+        <text x="206" y="599" fill="#8a8580" font-size="11">Kera besar</text>
+        <rect x="290" y="590" width="10" height="10" rx="2" fill="#7f77dd" opacity="0.7"/>
+        <text x="306" y="599" fill="#8a8580" font-size="11">Neanderthal</text>
+        <rect x="400" y="590" width="10" height="10" rx="2" fill="#1d9e75" opacity="0.7"/>
+        <text x="416" y="599" fill="#8a8580" font-size="11">H. sapiens</text>
+      </svg>
+      <figcaption>Pohon evolusi manusia - bukan garis lurus, melainkan pohon bercabang. Simpanse dan manusia berbagi nenek moyang bersama yang sudah punah, bukan satu menurunkan yang lain.</figcaption>
+    </figure>
+
+    <p>Kesalahan ini sebagian besar dipopulerkan oleh ilustrasi <em>March of Progress</em> karya Rudolf Zallinger yang diterbitkan majalah <em>Life</em> tahun 1965. Gambar itu menampilkan deretan figur dari kera bungkuk hingga manusia tegak berjalan dalam satu baris lurus — sebuah simplifikasi visual yang sangat menyesatkan, meski tidak dimaksudkan demikian oleh pembuatnya.</p>
+
+    <p>Berdasarkan analisis DNA komparatif, kemiripan urutan <em>coding</em> gen manusia dengan simpanse mencapai sekitar <strong>98,7%</strong>. Ini bukan berarti manusia "hampir sama dengan simpanse," melainkan mencerminkan betapa dekatnya waktu percabangan dua spesies ini dalam skala waktu geologi.</p>
+
+    <hr class="divider" />
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 2 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">2</span>
+      <h2>"Evolusi Hanya Teori — Belum Terbukti"</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Evolusi cuma teori, bukan fakta."
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Dalam bahasa sains, "teori" bukan berarti "dugaan." Teori adalah <strong>kerangka penjelasan yang telah diuji secara ekstensif, didukung bukti dari berbagai disiplin ilmu, dan mampu membuat prediksi yang dapat diverifikasi</strong>. Teori gravitasi, teori kuman penyakit, dan teori evolusi berada di tingkat epistemologis yang sama.
+    </div>
+
+    <p>Kebingungan ini muncul karena dalam bahasa sehari-hari, "teori" berarti spekulasi atau perkiraan. Dalam sains, maknanya berbeda: teori adalah penjelasan yang telah melewati pengujian berulang dari berbagai arah. Evolusi didukung oleh rekam fosil, analisis DNA komparatif, anatomi komparatif, biogeografi, dan bukti dari biologi molekuler.</p>
+
+    <hr class="divider" />
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 3 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">3</span>
+      <h2>"Tidak Ada Fosil Transisi — Bukti Tidak Lengkap"</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Kalau evolusi benar, kenapa fosil transisinya tidak ada? Ada 'mata rantai yang hilang.'"
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Fosil transisi hominin justru <strong>sudah banyak ditemukan</strong>. Setiap dekade membawa penemuan baru yang semakin memperinci pohon evolusi manusia.
+    </div>
+
+    <div class="table-wrap">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Spesies</th>
+            <th>Usia</th>
+            <th>Signifikansi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><em>Sahelanthropus tchadensis</em></td>
+            <td>~7 juta tahun</td>
+            <td>Kemungkinan hominin tertua yang diketahui</td>
+          </tr>
+          <tr>
+            <td><em>Ardipithecus ramidus</em> ("Ardi")</td>
+            <td>~4,4 juta tahun</td>
+            <td>Bipedal parsial, otak masih kecil</td>
+          </tr>
+          <tr>
+            <td><em>Australopithecus afarensis</em> ("Lucy")</td>
+            <td>~3,2 juta tahun</td>
+            <td>Bipedal penuh, otak berukuran kera besar</td>
+          </tr>
+          <tr>
+            <td><em>Homo habilis</em></td>
+            <td>~2,4–1,4 juta tahun</td>
+            <td>Pengguna alat batu pertama yang terdokumentasi</td>
+          </tr>
+          <tr>
+            <td><em>Homo erectus</em></td>
+            <td>~1,9 juta tahun</td>
+            <td>Pertama bermigrasi keluar Afrika</td>
+          </tr>
+          <tr>
+            <td><em>Homo heidelbergensis</em></td>
+            <td>~700 ribu tahun</td>
+            <td>Nenek moyang bersama Neanderthal dan <em>H. sapiens</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 4 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">4</span>
+      <h2>Evolusi Bergerak Menuju "Kesempurnaan"</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Manusia adalah puncak dan tujuan akhir evolusi."
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Evolusi tidak memiliki tujuan akhir (<em>teleologi</em>). Seleksi alam hanya menyaring sifat yang meningkatkan <strong>keberhasilan reproduksi di lingkungan tertentu pada waktu tertentu</strong> — bukan menuju "makhluk ideal."
+    </div>
+
+    <p>Beberapa sifat manusia justru merupakan <strong>kompromi evolusioner</strong> yang tidak sempurna: punggung bawah yang rentan nyeri adalah konsekuensi dari postur bipedal yang berevolusi cepat dari leluhur berkaki empat; saluran napas dan saluran makan yang bersilangan meningkatkan risiko tersedak; proses kelahiran yang menyakitkan adalah hasil dari kepala bayi yang tumbuh besar lebih cepat dari lebar panggul.</p>
+
+    <hr class="divider" />
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 5 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">5</span>
+      <h2>Neanderthal Adalah Leluhur Langsung Manusia Modern</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Kita keturunan Neanderthal."
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Neanderthal adalah <strong>spesies saudara</strong> (<em>sister species</em>), bukan leluhur langsung. Perkawinan campuran (<em>interbreeding</em>) memang terjadi — manusia non-Afrika modern mewarisi sekitar <strong>1–4% DNA Neanderthal</strong> — namun ini berbeda dengan hubungan leluhur-keturunan langsung.
+    </div>
+
+    <p>Temuan genomik ini berasal dari tim paleogenetika yang dipimpin Svante Pääbo, yang berhasil mengekstrak dan menganalisis DNA dari tulang Neanderthal berusia puluhan ribu tahun. Pääbo menerima Hadiah Nobel Fisiologi atau Kedokteran 2022 atas pekerjaan ini. Artinya, sebagian kecil dari warisan genetik Neanderthal memang hidup di dalam sebagian besar manusia modern — hanya bukan karena kita adalah keturunannya secara langsung.</p>
+
+    <hr class="divider" />
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 6 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">6</span>
+      <h2>Evolusi Pasti Bertentangan dengan Agama</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Menerima evolusi berarti menolak agama."
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Ini adalah klaim epistemologis dan teologis, bukan klaim ilmiah. Secara faktual: <strong>Vatikan (1996)</strong> melalui pesan Paus Yohanes Paulus II kepada Pontifical Academy of Sciences secara eksplisit menyatakan bahwa evolusi "lebih dari sekadar hipotesis" dan tidak bertentangan dengan iman Katolik. Sejumlah cendekiawan Muslim seperti Nidhal Guessoum juga berargumen bahwa kompatibilitas antara sains evolusi dan teologi Islam dimungkinkan — meski ini bukan pandangan yang diadopsi secara luas secara institusional.
+    </div>
+
+    <p>Konflik yang sering muncul bersumber dari <strong>interpretasi literal teks suci</strong>, bukan dari sains itu sendiri. Ini adalah debat teologis internal di dalam komunitas masing-masing agama, bukan konsekuensi logis dari teori evolusi.</p>
+
+    <hr class="divider" />
+
+    <!-- ═══════════════════════════════ MISKONSEPSI 7 ═══════════════════════════════ -->
+    <div class="misc-header">
+      <span class="misc-number">7</span>
+      <h2>Teori Evolusi Mendukung Rasisme</h2>
+    </div>
+
+    <div class="myth-box">
+      <strong>❌ Miskonsepsi</strong>
+      "Darwin mengatakan orang Afrika lebih dekat ke kera." / "Evolusi membenarkan hierarki ras."
+    </div>
+    <div class="fact-box">
+      <strong>✅ Fakta</strong>
+      Darwin justru mengidentifikasi <strong>Afrika sebagai asal manusia</strong> dalam <em>The Descent of Man</em> (1871). Rasisme saintifik abad ke-19 adalah distorsi ideologis yang dilakukan oleh pihak-pihak yang <em>menentang atau menyalahgunakan</em> kerangka evolusi — bukan konsekuensi dari teori Darwin.
+    </div>
+
+    <!-- Peta Out of Africa: Wikimedia Commons, CC BY-SA 3.0 -->
+    <figure class="illustration-wrap" style="padding:16px;">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Human_migration_out_of_Africa.png"
+        alt="Peta migrasi manusia keluar dari Afrika - Out of Africa hypothesis"
+        style="width:100%; border-radius:6px; display:block;"
+        loading="lazy"
+      />
+      <figcaption>Peta migrasi <em>Homo sapiens</em> keluar dari Afrika berdasarkan bukti genomik dan arkeologis. Seluruh manusia modern berasal dari populasi Afrika — mempertegas kesimpulan Darwin (1871). <em>Sumber: Wikimedia Commons, lisensi CC BY-SA 3.0.</em></figcaption>
+    </figure>
+
+    <!-- SVG 2: Darwin quote + Distortion diagram -->
+    <figure class="illustration-wrap">
+      <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans', sans-serif">
+
+        <!-- Left: Darwin & Afrika panel -->
+        <rect x="0" y="0" width="300" height="280" rx="6" fill="#0e1a14" opacity="0.6"/>
+
+        <!-- Africa silhouette (simple) -->
+        <path d="M150,30 C168,28 185,32 195,44 C208,58 210,72 205,90 C215,100 218,116 212,130
+                 C220,144 218,162 208,174 C200,190 188,202 178,216 C172,228 168,238 158,244
+                 C148,250 138,246 132,236 C122,222 116,208 112,194 C100,182 90,168 88,152
+                 C82,136 84,118 90,104 C84,90 84,74 92,60 C102,44 130,32 150,30Z"
+              fill="#2a5a3a" opacity="0.5"/>
+        <!-- Pin on Africa -->
+        <circle cx="148" cy="160" r="8" fill="#c8a96e"/>
+        <line x1="148" y1="168" x2="148" y2="185" stroke="#c8a96e" stroke-width="2"/>
+        <text x="148" y="200" text-anchor="middle" fill="#c8a96e" font-size="11" font-weight="600">Asal Manusia</text>
+
+        <!-- Darwin label -->
+        <text x="150" y="238" text-anchor="middle" fill="#7eb8a0" font-size="12" font-weight="600">Darwin, 1871:</text>
+        <text x="150" y="256" text-anchor="middle" fill="#5a8870" font-size="10" font-style="italic">"...kemungkinan leluhur kita</text>
+        <text x="150" y="270" text-anchor="middle" fill="#5a8870" font-size="10" font-style="italic">hidup di Benua Afrika"</text>
+
+        <!-- Right: Distortion flow -->
+        <rect x="320" y="0" width="360" height="280" rx="6" fill="#1a0e0e" opacity="0.6"/>
+        <text x="500" y="26" text-anchor="middle" fill="#e05555" font-size="12" font-weight="600" letter-spacing="1">DISTORSI IDEOLOGIS</text>
+
+        <!-- Flow boxes -->
+        <rect x="355" y="42" width="290" height="44" rx="4" fill="#2a1010" stroke="#7a3030" stroke-width="1"/>
+        <text x="500" y="60" text-anchor="middle" fill="#c8a870" font-size="11" font-weight="600">Teori Evolusi Darwin (Sains)</text>
+        <text x="500" y="76" text-anchor="middle" fill="#8a7050" font-size="10">Nenek moyang bersama, asal Afrika</text>
+
+        <line x1="500" y1="86" x2="500" y2="108" stroke="#c04040" stroke-width="2"/>
+        <polygon points="495,108 500,118 505,108" fill="#c04040"/>
+        <text x="500" y="104" text-anchor="middle" fill="#c04040" font-size="9">Distorsi oleh ideolog rasis Eropa</text>
+
+        <rect x="355" y="120" width="290" height="44" rx="4" fill="#2a1010" stroke="#c04040" stroke-width="1.5"/>
+        <text x="500" y="138" text-anchor="middle" fill="#e07070" font-size="11" font-weight="600">Social Darwinism (Ideologi)</text>
+        <text x="500" y="154" text-anchor="middle" fill="#8a5050" font-size="10">Klaim hierarki ras — bertentangan dg sains</text>
+
+        <!-- Key actors -->
+        <text x="360" y="188" fill="#8a6060" font-size="10" font-weight="600">Tokoh yang lebih tepat dikaitkan:</text>
+        <rect x="355" y="196" width="86" height="36" rx="3" fill="#1e1010" stroke="#604040" stroke-width="1"/>
+        <text x="398" y="210" text-anchor="middle" fill="#c08080" font-size="9" font-weight="600">Ernst Haeckel</text>
+        <text x="398" y="224" text-anchor="middle" fill="#806060" font-size="8">Hierarki ras semu</text>
+
+        <rect x="450" y="196" width="86" height="36" rx="3" fill="#1e1010" stroke="#604040" stroke-width="1"/>
+        <text x="493" y="210" text-anchor="middle" fill="#c08080" font-size="9" font-weight="600">Francis Galton</text>
+        <text x="493" y="224" text-anchor="middle" fill="#806060" font-size="8">Penggagas Eugenika</text>
+
+        <rect x="548" y="196" width="86" height="36" rx="3" fill="#1e1010" stroke="#604040" stroke-width="1"/>
+        <text x="591" y="210" text-anchor="middle" fill="#c08080" font-size="9" font-weight="600">Kraniometri</text>
+        <text x="591" y="224" text-anchor="middle" fill="#806060" font-size="8">Pengukuran tengkorak</text>
+
+        <!-- Modern science verdict -->
+        <rect x="355" y="244" width="290" height="30" rx="4" fill="#0e1a14" stroke="#2a6a4a" stroke-width="1.5"/>
+        <text x="500" y="264" text-anchor="middle" fill="#5ab890" font-size="10" font-weight="600">Genomik modern: semua H. sapiens berasal dari Afrika — tidak ada hierarki ras</text>
+      </svg>
+      <figcaption>Kiri: Darwin (1871) justru menunjuk Afrika sebagai asal manusia. Kanan: "Social Darwinism" adalah distorsi ideologis oleh pihak yang menyalahgunakan nama Darwin — bukan konsekuensi dari teori evolusi yang sebenarnya.</figcaption>
+    </figure>
+
+    <p>Dalam <em>The Descent of Man, and Selection in Relation to Sex</em> (1871), Darwin secara eksplisit menulis bahwa nenek moyang manusia kemungkinan berasal dari Afrika — tepat berdasarkan fakta bahwa gorila dan simpanse, kerabat terdekat manusia, hidup di sana. Darwin sendiri adalah seorang <strong>abolisionis</strong> yang menentang perbudakan, berbeda dari banyak intelektual Eropa semasanya.</p>
+
+    <p>Yang menggunakan nama "Darwin" untuk membenarkan rasisme adalah tokoh-tokoh seperti <strong>Francis Galton</strong> (sepupu Darwin dan penggagas eugenika) serta <strong>Ernst Haeckel</strong>, yang membuat ilustrasi hierarki ras manusia yang kini dianggap pseudosains. Ideologi ini disebut <em>Social Darwinism</em> — sebuah label yang menyematkan nama Darwin pada gagasan yang bertentangan dengan sains evolusi yang sebenarnya.</p>
+
+    <p>Ironisnya, genomik modern justru <strong>mempertegas kesimpulan Darwin</strong>: hipotesis <em>Out of Africa</em> yang didukung oleh penelitian DNA mitokondria dan kromosom Y menunjukkan bahwa seluruh <em>Homo sapiens</em> modern merupakan keturunan populasi yang berasal dari Afrika sub-Sahara. Tidak ada dasar genetik untuk hierarki ras.</p>
+
+    <div class="pull-quote">
+      <p>"Semua manusia modern adalah keturunan dari populasi yang sama di Afrika. Konsep 'ras' sebagai kategori biologis bertingkat tidak memiliki dasar dalam genetika populasi."</p>
+      <cite>— Konsensus Genomik Modern, Human Genome Project</cite>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Closing -->
+    <h2>Mengapa Miskonsepsi Ini Berbahaya?</h2>
+    <p>Kesalahpahaman tentang evolusi bukan sekadar masalah akademis. Dampak nyatanya meliputi: penolakan vaksin karena tidak memahami bagaimana virus dan bakteri berevolusi menjadi resistan; penerimaan pseudosains dan klaim "desain cerdas" yang tidak dapat diuji secara ilmiah; serta distorsi sejarah yang membuat teori evolusi tampak sebagai alat rasisme, padahal faktanya justru sebaliknya.</p>
+
+    <p>Memahami evolusi dengan benar berarti memahami bagaimana seluruh biologi modern bekerja — dari pengembangan antibiotik hingga penelitian kanker, dari konservasi spesies hingga pemetaan penyakit menular.</p>
+
+    <div class="closing-box">
+      <h3>Catatan Editorial</h3>
+      <p>Artikel ini tidak mengambil posisi teologis atau filosofis mengenai hubungan antara evolusi dan keyakinan agama. Semua klaim faktual dalam artikel ini didukung oleh sumber ilmiah yang dapat diperiksa. Pembaca didorong untuk merujuk langsung ke sumber primer yang tercantum di bawah.</p>
+    </div>
+
+    <!-- SOURCES -->
+    <div class="sources">
+      <h3>Sumber &amp; Referensi</h3>
+      <ol>
+        <li>Darwin, C. (1871). <em>The Descent of Man, and Selection in Relation to Sex.</em> John Murray, London.</li>
+        <li>Wood, B. (2010). Reconstructing human evolution: Achievements, challenges, and opportunities. <em>PNAS</em>, 107(S2), 8902–8909.</li>
+        <li>Mikkelsen, T.S. et al. (2005). Initial sequence of the chimpanzee genome and comparison with the human genome. <em>Nature</em>, 437, 69–87.</li>
+        <li>Green, R.E. et al. (2010). A Draft Sequence of the Neandertal Genome. <em>Science</em>, 328(5979), 710–722.</li>
+        <li>Johanson, D.C. &amp; Taieb, M. (1976). Plio-Pleistocene hominid discoveries in Hadar, Ethiopia. <em>Nature</em>, 260, 293–297.</li>
+        <li>National Academy of Sciences (2008). <em>Science, Evolution, and Creationism.</em> National Academies Press.</li>
+        <li>Guessoum, N. (2011). <em>Islam's Quantum Question: Reconciling Muslim Tradition and Modern Science.</em> I.B. Tauris.</li>
+        <li>Pope John Paul II (1996). Message to the Pontifical Academy of Sciences on Evolution. <em>L'Osservatore Romano</em>, 23 Oktober 1996.</li>
+        <li>Nobel Committee (2022). Press release: The Nobel Prize in Physiology or Medicine 2022 – Svante Pääbo. Karolinska Institutet.</li>
+        <li>Smithsonian National Museum of Natural History. <em>Human Origins</em>. <a href="https://humanorigins.si.edu" target="_blank" rel="noopener">humanorigins.si.edu</a></li>
+      </ol>
+    </div>
+
+  </article>
+
+  <script>
+    const savedTheme = localStorage.getItem('kbdi-theme');
+    if (savedTheme === 'light') document.documentElement.classList.add('light');
+
+    fetch('https://edukbdi.github.io/header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.body.insertAdjacentHTML('afterbegin', html);
+        const header = document.getElementById('kbdi-header');
+        if (savedTheme === 'light') header.classList.add('kbdi-light');
+        document.getElementById('kbdiThemeToggle').addEventListener('click', function() {
+          const isLight = document.documentElement.classList.toggle('light');
+          header.classList.toggle('kbdi-light', isLight);
+          localStorage.setItem('kbdi-theme', isLight ? 'light' : 'dark');
+          const footer = document.getElementById('kbdi-footer');
+          if (footer) footer.classList.toggle('kbdi-light', isLight);
+        });
+      });
+
+    fetch('https://edukbdi.github.io/footer.html')
+      .then(r => r.text())
+      .then(html => {
+        document.body.insertAdjacentHTML('beforeend', html);
+        const footer = document.getElementById('kbdi-footer');
+        if (footer && savedTheme === 'light') footer.classList.add('kbdi-light');
+      });
+  </script>
+</body>
+</html>
